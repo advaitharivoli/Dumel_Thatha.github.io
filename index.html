@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumel Thatha - Celebrating Tamil Grandparents</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        /* Header Styles */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e74c3c;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4a4a4a;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            background: #fef5f5;
+            color: #e74c3c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            padding: 100px 24px 80px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        .tamil-text {
+            font-size: 1.2rem;
+            color: #7e57c2;
+            margin: 24px 0;
+            font-weight: 500;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 24px;
+        }
+
+        .section-alt {
+            background: #fafafa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid Layouts */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Story Cards */
+        .story-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .story-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .story-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .story-content {
+            padding: 28px;
+        }
+
+        .story-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .story-text {
+            color: #4a4a4a;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .story-tamil {
+            font-style: italic;
+            color: #7e57c2;
+            font-size: 0.95rem;
+            margin-top: 16px;
+        }
+
+        /* Quote Cards */
+        .quote-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .quote-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .quote-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .quote-author {
+            font-weight: 600;
+            text-align: right;
+            opacity: 0.9;
+        }
+
+        /* Wisdom Grid */
+        .wisdom-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .wisdom-card {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        .wisdom-card:hover {
+            border-color: #e74c3c;
+            transform: translateY(-2px);
+        }
+
+        .wisdom-emoji {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .wisdom-text {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .wisdom-translation {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Interactive Section */
+        .interactive-box {
+            background: #ffffff;
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+
+        .advice-display {
+            background: #fff9e6;
+            padding: 32px;
+            border-radius: 8px;
+            margin: 24px 0;
+            border-left: 4px solid #f39c12;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a4a4a;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 24px;
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 60px 24px 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .heart {
+            color: #e74c3c;
+            display: inline-block;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .footer-credit {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+            font-size: 0.95rem;
+        }
+
+        .footer-credit strong {
+            color: #e74c3c;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interactive-box {
+                padding: 32px 24px;
+            }
+        }
+
+        /* Feature Highlight */
+        .highlight-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .highlight-box h3 {
+            color: #2d3436;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            color: #2d3436;
+        }
+
+        .highlight-box li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .highlight-box li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🏠</span>
+                <span>Dumel Thatha</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#roasts">Roasts</a></li>
+                    <li><a href="#wisdom">Wisdom</a></li>
+                    <li><a href="#interactive">Interactive</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Dumel Thatha</h1>
+            <p class="tamil-text">தாத்தா பாட்டி - வாழ்க்கையின் இனிமை</p>
+            <p class="subtitle">Celebrating the endless love, wisdom, and hilarious roasts of Tamil grandparents</p>
+            <p class="subtitle">Where every story begins with "ஒரு முறை..." (Once upon a time...)</p>
+        </div>
+    </section>
+
+    <!-- Stories Section -->
+    <section id="stories" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>🎭 Master Roasters & Joke Champions</h2>
+                <p>The funniest, silliest, and most heartwarming moments with our beloved Thathas and Paattis</p>
+            </div>
+            <div class="card-grid">
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">📱</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">🤳 The Selfie Expert</h3>
+                        <p class="story-text">Thatha discovers selfie mode and takes 247 photos of his nostril thinking the camera is broken. Shows everyone proudly: "Look, I am YouTuber now!" Meanwhile, half his face is missing in every photo! 😂</p>
+                        <p class="story-tamil">"எனக்கு technology எல்லாம் கை வசம்!" (Technology is under my control!)</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6b35 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">🥄</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">🍛 The Recipe Decoder</h3>
+                        <p class="story-text">Paatti's cooking measurements: "Add salt like பிரியாணி shop" (shows thumb), "Add தூள் like this" (waves hand mysteriously), "Cook until it smells like heaven" (sniffs dramatically). NASA scientists have given up trying to decode her recipes!</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">🏏</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">🏏 The Commentary King</h3>
+                        <p class="story-text">Thatha provides live cricket commentary like he's coaching the team: "அடேய் விராட்! Left side அடி!" (Hey Virat! Hit to the left!). When India loses, he personally takes responsibility: "I told them wrong strategy!" 🤦‍♂️</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">💰</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">💰 The Bargain Queen</h3>
+                        <p class="story-text">Paatti haggles ₹500 vegetables down to ₹400, then gives ₹200 tip because "poor boy looks hungry." Math genius level: Negative profit but maximum kindness! Her heart calculator is permanently broken! ❤️</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #ff5722 0%, #ff9800 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">🔥</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">🎭 The Professional Roaster</h3>
+                        <p class="story-text">You wear new shirt: "வாவ் எங்க function? அட wait... who will invite you to function? First learn to comb your hair properly!" *Laughs at own joke for 5 minutes while you question your life choices* 💀</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">🎪</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">🎪 The Comedy Central</h3>
+                        <p class="story-text">Introducing you to guests: "இது என் பேரன், வெரி intelligent... but brain is in sleep mode 24/7! He can solve calculus but can't find his own socks!" *Guest dies laughing, you die inside* 🪦</p>
+                        <p class="story-tamil">"படிப்பு படிச்சான், ஆனா common sense இல்ல!" (Studied well, but no common sense!)</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #ff6f00 0%, #ffcc02 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">🔮</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">🔍 The Detective Agency</h3>
+                        <p class="story-text">Paatti can detect hunger from different solar system, predict rain by sniffing air, and know exactly which god to pray to for your specific problem. But asks you to explain how to unmute WhatsApp video call 47 times! 🤯</p>
+                        <p class="story-tamil">"எனக்கு எல்லாம் தெரியும் மகனே, ஆனா இந்த phone மட்டும்..." (I know everything my child, but this phone only...)</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #f06292 0%, #ba68c8 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">😴</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">😴 The Sleep Analyst</h3>
+                        <p class="story-text">Thatha: "நீ தூங்குறதை பார்த்தா கும்பகர்ணன் கூட jealous படுவான்! (Even Kumbhakarna would be jealous seeing how you sleep!) You sleep 12 hours and still complain tired? In my time, we slept 4 hours and worked 20 hours!"</p>
+                        <p class="story-tamil">"எழுந்திரு டா, பூனை கூட இவ்ளோ தூங்காது!" (Wake up da, even cats don't sleep this much!)</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #26a69a 0%, #66bb6a 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">🚗</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">🚗 The Traffic Expert</h3>
+                        <p class="story-text">Paatti's driving commentary: "வேகமா போ! (Go fast!) அடடா slow down! Signal red ah? போகலாம் போகலாம்! (Can go can go!) Left திருப்பு! Right இல்ல left! Wait I meant right! அய்யோ நாம எங்க வந்துட்டோம்!" (Oh god where did we come!)</p>
+                        <p class="story-tamil">"நான் சொன்னா கேக்கலைன்னா இப்ப பார் எங்க வந்திட்டோம்!" (If you didn't listen to me, see where we've come!)</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #ff7043 0%, #ffab91 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">👔</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">👔 The Wardrobe Inspector</h3>
+                        <p class="story-text">Thatha sees your ripped jeans: "என்னடா இது? புது dress வாங்கி கிழிச்சு போட்டுருக்கியா? (What is this? Bought new dress and tore it?) நாங்க old dress patch போட்டு repair பண்ணுவோம், நீங்க new dress-ஐ கிழிக்கிறீங்க!" We used to repair old clothes, you tear new ones! Is this fashion or tragedy?</p>
+                        <p class="story-tamil">"இதுக்கா ₹5000 கொடுத்தே? கிழிந்ததுக்கா காசு?" (Paid ₹5000 for torn clothes?)</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #42a5f5 0%, #478ed1 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">💻</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">💻 The IT Support Guru</h3>
+                        <p class="story-text">Paatti calls: "என்னோட phone problem ஆ இருக்கு! (My phone has problem!) Screen-ல் nothing showing!" You: "Paatti, switch on the phone first." Paatti: "அதானே! That's the problem! Button press பண்ணியும் வேலை ஆகல!" (Even after pressing button it doesn't work!) You: "Did you charge it?" Paatti: "Charge-ஆ? Phone-க்கு charge வேணுமா?" (Phone needs charge?) 🤦‍♂️</p>
+                        <p class="story-tamil">"Technology-ல கஷ்டப்பட்டு என்ன பண்றது!" (What's the use struggling with technology!)</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #ab47bc 0%, #8e24aa 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">🍲</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">🍲 The Food Critic</h3>
+                        <p class="story-text">You order food online. Thatha: "₹400 for one dosa? அது என்னோட வீட்ல ₹40-க்கு 10 dosa கிடைக்கும்! (At my place, ₹40 gets you 10 dosas!) Plus hotel-ல பண்ணின dosa-க்கும் என் paatti பண்ணின dosa-க்கும் compare-ஏ இல்ல! Hotel dosa is like photocopy, paatti's dosa is original masterpiece! You're paying for cardboard with oil!" 📦🛢️</p>
+                        <p class="story-tamil">"வீட்ல சாப்பாடு இருக்கும்போது ஏன் வெளியில?" (Why outside food when home food exists?)</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image" style="background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);">
+                        <div style="font-size: 5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">🎓</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">🎓 The Education Minister</h3>
+                        <p class="story-text">Paatti to your 5-year-old cousin: "என்ன படிக்குற? (What are you studying?) என் time-ல நாங்க 5 வயசுல multiplication table எல்லாம் சொல்லுவோம்! (At 5 years, we knew multiplication tables!) Now kids can't even count without calculator! Even my grocery bill calculation is faster than your phone calculator!" *Proceeds to calculate ₹347 + ₹283 mentally in 2 seconds* 🧮⚡</p>
+                        <p class="story-tamil">"Brain-அ use பண்ணு, calculator அல்ல!" (Use brain, not calculator!)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roasts Section -->
+    <section id="roasts" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>🔥 Daily Roast Sessions</h2>
+                <p>Savage but loving burns that only Tamil grandparents can deliver</p>
+            </div>
+            <div class="card-grid">
+                <div class="quote-card">
+                    <p class="quote-text">"Why you eating இட்லி with fork? What next, you'll eat rice with chopsticks? Are you planning world tour of wrong eating methods?"</p>
+                    <p class="quote-author">- Paatti's Cultural Preservation Society</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"You know difference between you and Einstein? Einstein had messy hair by CHOICE! Your hair looks like you stuck finger in electrical socket... permanently!"</p>
+                    <p class="quote-author">- Thatha's Scientific Analysis Dept.</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"This boy sleeps so much, if sleeping was Olympic sport, he'd win gold, silver, bronze, AND still be snoring during national anthem!"</p>
+                    <p class="quote-author">- International Sleep Studies Institute</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"You're so slow, snails overtook you, stopped for tea break, wrote autobiography, and are STILL wondering if you'll reach destination this century!"</p>
+                    <p class="quote-author">- Speed Analysis & Turtle Comparison Lab</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"Your handwriting is so bad, doctors are asking YOU to teach them how to write illegibly! Even chickens walk straighter lines!"</p>
+                    <p class="quote-author">- Calligraphy Disaster Assessment Team</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"You eat so little, I need magnifying glass to find food on your plate! Are you feeding invisible ant family or what?"</p>
+                    <p class="quote-author">- Appetite Monitoring & Investigation Unit</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"நீ எவ்ளோ மெலிஞ்சிருக்க! (You're so thin!) Wind will blow you away like plastic bag! Eat more rice, not that computer mouse!"</p>
+                    <p class="quote-author">- Weight Management Committee</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"உன் dress எவ்ளோ சின்னது! (Your dress is so small!) Are you going to beach or temple? I can't tell difference! Where is remaining cloth?"</p>
+                    <p class="quote-author">- Fashion Police Tamil Division</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"You sit in AC all day and say 'hot hot'! நாங்க வயல்ல வெயில்ல வேலை செய்தோம்! (We worked in fields under sun!) You can't handle 5 minutes without AC!"</p>
+                    <p class="quote-author">- Climate Tolerance Testing Bureau</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"Phone-ல மட்டும் fast ah type பண்றே! (Only on phone you type fast!) But can't reply to my WhatsApp for 3 days? Are you NASA scientist or what?"</p>
+                    <p class="quote-author">- Digital Communication Standards Board</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"நீ சாப்டற சப்தம் கேட்காம இருந்தா, நினைப்போம் ghost வீட்டுல இருக்குன்னு! (If we don't hear your eating sounds, we'll think ghost is in the house!)"</p>
+                    <p class="quote-author">- Household Noise Monitoring Center</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"Your friends பெயரே எனக்கு remember ஆகல! Last week John, இந்த week Jake, next week Jack ah? Same person different name ah? நான் confused!"</p>
+                    <p class="quote-author">- Social Circle Documentation Dept.</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"Marriage பண்ணிக்கோ! (Get married!) I want to see great grandchildren before I die! What, you want me to live 200 years waiting for you?"</p>
+                    <p class="quote-author">- Family Planning Pressure Group</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"Gym போயி weight-அ lift பண்றே, வீட்ல shopping bag lift பண்ண மாட்ட! (You lift weights at gym but won't lift shopping bags at home!) Gym membership = ₹5000, Free home workout = ₹0! Smart ah?"</p>
+                    <p class="quote-author">- Home Economics Department</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"நீ ஒரு நாளைக்கு எத்தன செல்ஃபி எடுக்குற? (How many selfies you take per day?) Even actors don't take this many photos! Are you making movie or what?"</p>
+                    <p class="quote-author">- Photography Addiction Center</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"You say 'I'm on diet' and eat one அப்பளம் less! That's not diet, that's joke! நாங்க whole day வெறும் கஞ்சி குடிச்சோம்! (We drank only porridge whole day!)"</p>
+                    <p class="quote-author">- Authentic Diet Consultation Bureau</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"AC on பண்ணி blanket போர்த்திகிட்டு படுக்குற! (Sleep with AC on and blanket!) Then why AC? Save electricity or save planet, decide one thing! முதல்ல logic-அ சரி பண்ணு!"</p>
+                    <p class="quote-author">- Environmental Logic Department</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"Weekend-ல எல்லாரும் out-க்கு போறீங்க! நாங்க weekend-ல temple போவோம், நீங்க mall! கடவுள் வீடு-க்கும் shopping வீடு-க்கும் difference தெரியுமா?" (God's house vs shopping house, know the difference?)</p>
+                    <p class="quote-author">- Weekend Activity Guidelines Board</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"Netflix-ல் series பார்க்குறதுக்கு time இருக்கு, but எங்களோட கூட 10 minutes பேசுறதுக்கு time இல்ல! (Time for Netflix but not 10 minutes with us!) Priorities check பண்ணு!"</p>
+                    <p class="quote-author">- Family Time Management Association</p>
+                </div>
+
+                <div class="quote-card">
+                    <p class="quote-text">"Birthday-க்கு cake cut பண்றீங்க! எங்க time-ல அம்மா கை payasam தான் special treat! Now cake from bakery = modern, homemade sweet = old-fashioned ah? நம்ம culture-ஐ மறக்காதீங்க!"</p>
+                    <p class="quote-author">- Cultural Heritage Preservation Society</p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 60px;">
+                <h3>🎪 The Daily Roast Menu</h3>
+                <ul>
+                    <li><strong>Morning Special (காலை சிறப்பு):</strong> "Wake up late = Life failure analysis with historical examples + comparison to neighbor Ramu who is now CEO"</li>
+                    <li><strong>Afternoon Delight (மதிய மகிழ்ச்சி):</strong> "Outfit commentary + நீ இப்படியே போனா யாரு உன்னை கல்யாணம் பண்ணுவாங்க? (Who will marry you like this?)"</li>
+                    <li><strong>Evening Entertainment (மாலை பொழுது):</strong> "Career advice disguised as jokes + why your cousin is better than you in everything"</li>
+                    <li><strong>Night Cap (இரவு விருந்து):</strong> "Bedtime roasts about vampire lifestyle + reminder that கொசு (mosquitoes) only bite people who sleep late!"</li>
+                    <li><strong>Weekend Bonus (வார இறுதி சிறப்பு):</strong> "நீ என்ன செஞ்ச வாழ்க்கை-ல? (What did you achieve in life?) + Full life audit from birth till now!"</li>
+                    <li style="margin-top: 20px; font-style: italic; color: #2d3436;">* All roasts served with unlimited love, extra servings of food, and தேங்காய் சட்னி! ❤️🥥</li>
+                </ul>
+            </div>
+
+            <div style="background: #fff; padding: 40px; border-radius: 12px; margin-top: 40px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                <h3 style="color: #e74c3c; margin-bottom: 24px; font-size: 1.5rem;">🎭 Classic Tamil Grandparent One-Liners</h3>
+                <div style="color: #2d3436; line-height: 2;">
+                    <p><strong>Paatti:</strong> "சாப்டியா?" (Did you eat?) - Asked every 15 minutes regardless of your answer 🍽️</p>
+                    <p><strong>Thatha:</strong> "என் time-ல..." (In my time...) - Beginning of every legendary impossible story 👴</p>
+                    <p><strong>Paatti:</strong> "எங்க போற?" (Where are you going?) - Even if you just went to bathroom 🚽</p>
+                    <p><strong>Thatha:</strong> "இந்த generation-க்கு ஒன்னும் தெரியாது!" (This generation knows nothing!) - Said while asking how to forward WhatsApp message 📱</p>
+                    <p><strong>Paatti:</strong> "நீ எவ்ளோ weak-ஆ இருக்க!" (You're so weak!) - Said to Olympic athlete grandson 💪</p>
+                    <p><strong>Thatha:</strong> "நான் சொன்னா கேளு!" (Listen to what I say!) - Right before giving completely wrong advice 😄</p>
+                    <p><strong>Both:</strong> "வீடு வாங்கிட்டியா? Car வாங்கிட்டியா? Marriage ஆயிடுச்சா?" - The holy trinity of questions! 🏠🚗💑</p>
+                    <p><strong>Paatti:</strong> "வெளியில சாப்பாடு வேண்டாம், வயிறு கெடும்!" (Don't eat outside food, stomach will spoil!) - While secretly loving hotel biriyani 🍛</p>
+                    <p><strong>Thatha:</strong> "TV-ல் news மட்டும் பார்! Cinema வேண்டாம்!" (Watch only news on TV, no movies!) - While binge-watching old Tamil movies 📺</p>
+                    <p><strong>Paatti:</strong> "இன்னிக்கு என்ன சமைக்கறது?" (What to cook today?) - Already has 8-course meal plan ready 👩‍🍳</p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #fff5e1 0%, #ffe4b5 100%); padding: 40px; border-radius: 12px; margin-top: 40px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                <h3 style="color: #d35400; margin-bottom: 24px; font-size: 1.5rem;">😂 Universal Grandparent Truths (Everyone Can Relate!)</h3>
+                <div style="color: #2d3436; line-height: 2;">
+                    <p>✨ <strong>The Fridge Rule:</strong> "Close the fridge! எவ்ளோ நேரம் open பண்ணி வெச்சுருக்க! (How long you kept it open!) Electricity bill-அ யார் கட்டுவாங்க?" ⚡</p>
+                    <p>✨ <strong>The Light Switch Theory:</strong> "எல்லா lights-உம் on பண்ணுறீங்க! இது வீடா illa airport-ஆ? (Is this house or airport?) Switch off when you leave room!" 💡</p>
+                    <p>✨ <strong>The Water Wisdom:</strong> "Tap-அ close பண்ணு! Water waste பண்ணாதே! (Don't waste water!) நாங்க well water இழுத்து எடுத்தோம், நீங்க tap water-ஐ waste பண்றீங்க!" 💧</p>
+                    <p>✨ <strong>The Hair Philosophy:</strong> "Long hair வெச்சுருக்க nice-ஆ! But why different color? God gave you black hair, you made it brown, red, purple... Rainbow-ஆ?" 🌈</p>
+                    <p>✨ <strong>The Shoe Logic:</strong> "வீட்டுக்குள்ள shoes போட்டுட்டு வரதா? (Coming inside with shoes?) விழுந்து உடையும்! (Will fall and break!) Remove outside!" 👟</p>
+                    <p>✨ <strong>The Money Mantra:</strong> "Save பண்ணு! Bank-ல் காசு இருந்தா தான் future secure! Don't spend everything on coffee, pizza, and that Netflix subscription!" 💰</p>
+                    <p>✨ <strong>The Weather Prediction:</strong> "நான் சொன்னேன்ல rain வரும்னு! (I told you rain will come!) My knee is never wrong! Better than weather app!" 🌧️</p>
+                    <p>✨ <strong>The Neighbor Comparison:</strong> "பக்கத்து வீட்டு பையன் engineer ஆயிட்டான், நீ என்ன பண்றே? (Neighbor's son became engineer, what are you doing?) Always compare, never satisfied!" 🏘️</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wisdom Section -->
+    <section id="wisdom" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>🧠 Timeless Tamil Wisdom</h2>
+                <p>Life lessons that have been passed down through generations</p>
+            </div>
+            <div class="wisdom-grid">
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">🍚</span>
+                    <p class="wisdom-text">வயிறு நிறைந்தால் மனசு நிறையும்</p>
+                    <p class="wisdom-translation">When stomach is full, heart is full</p>
+                </div>
+
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">🤝</span>
+                    <p class="wisdom-text">நல்ல வார்த்தை நாலு பேர் கேட்க வேண்டும்</p>
+                    <p class="wisdom-translation">Good words should be heard by four people</p>
+                </div>
+
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">📚</span>
+                    <p class="wisdom-text">படித்தால் பத்து ரூபாய்</p>
+                    <p class="wisdom-translation">Study and earn ten rupees</p>
+                </div>
+
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">🌅</span>
+                    <p class="wisdom-text">கடவுள் இருக்கான் குமாரு</p>
+                    <p class="wisdom-translation">God exists, my child</p>
+                </div>
+
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">❤️</span>
+                    <p class="wisdom-text">அன்பே சிவம்</p>
+                    <p class="wisdom-translation">Love is divine</p>
+                </div>
+
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">🙏</span>
+                    <p class="wisdom-text">எல்லாம் நல்லதுக்கே நடக்கும்</p>
+                    <p class="wisdom-translation">Everything happens for the good</p>
+                </div>
+
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">👨‍👩‍👧‍👦</span>
+                    <p class="wisdom-text">குடும்பமே பெரிய செல்வம்</p>
+                    <p class="wisdom-translation">Family is the greatest wealth</p>
+                </div>
+
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">🌾</span>
+                    <p class="wisdom-text">விதைத்ததை அறுப்பாய்</p>
+                    <p class="wisdom-translation">You will reap what you sow</p>
+                </div>
+
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">💧</span>
+                    <p class="wisdom-text">தண்ணீர் விட்டால் தாமரை மலரும்</p>
+                    <p class="wisdom-translation">With water, the lotus will bloom</p>
+                </div>
+
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">🕊️</span>
+                    <p class="wisdom-text">பொறுமை கசக்கும் ஆனா பலன் இனிக்கும்</p>
+                    <p class="wisdom-translation">Patience is bitter but fruit is sweet</p>
+                </div>
+
+                <div class="wisdom-card">
+                    <span class="wisdom-emoji">🏡</span>
+                    <p class="wisdom-text">தன் வீடு தான் சொர்க்கம்</p>
+                    <p class="wisdom-translation">Your own home is heaven</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats-container">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Food Offered Daily</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">247</div>
+                    <div class="stat-label">Roasts Per Week</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Unconditional Love</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Section -->
+    <section id="interactive" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>🎉 Interactive Thatha-Paatti Experience</h2>
+                <p>Get wisdom from Thatha and test Paatti's hunger detector!</p>
+            </div>
+            <div class="interactive-box">
+                <button onclick="getRandomAdvice()" class="btn-primary">
+                    Get Thatha's Advice 🎯
+                </button>
+                <div id="advice-display" class="advice-display">
+                    Click the button above for some classic Thatha wisdom!
+                </div>
+
+                <div style="margin-top: 60px;">
+                    <h3 style="margin-bottom: 30px; color: #1a1a1a; font-size: 1.5rem;">Paatti's Hunger Level Detector 🍽️</h3>
+                    <input type="range" id="hungerSlider" min="0" max="100" value="50" style="
+                        width: 100%;
+                        max-width: 400px;
+                        height: 8px;
+                        border-radius: 5px;
+                        background: #ddd;
+                        outline: none;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        cursor: pointer;
+                    " oninput="updateHungerAdvice(this.value)">
+                    <div id="hunger-advice" style="
+                        margin: 24px 0;
+                        padding: 24px;
+                        background: #e8f5e8;
+                        border-radius: 8px;
+                        font-weight: 500;
+                        color: #1a1a1a;
+                        border-left: 4px solid #4CAF50;
+                    ">
+                        Move the slider to see what Paatti would say!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div style="margin-bottom: 40px;">
+            <img src="Screenshot 2025-10-02 at 1.21.46 PM.png" alt="">
+            </div>
+            
+            <p class="footer-text">
+                Made with <span class="heart">❤️</span> for all the amazing Tamil Thathas and Paattis
+            </p>
+            <p class="footer-text">"பாட்டி கை சமையல் > Five Star Hotel" - Universal Truth</p>
+            <div style="margin-top: 30px;">
+                <p class="tamil-text" style="color: #ccc;">
+                    "தாத்தா பாட்டி இல்லாத வீடு, கோயில் இல்லாத ஊர் போல"
+                </p>
+                <p style="font-size: 0.95rem; color: #999; margin-top: 8px;">
+                    (A home without grandparents is like a town without a temple)
+                </p>
+            </div>
+            <div class="footer-credit">
+                <p style="font-size: 1.1rem; margin-bottom: 12px;">© 2025 Advaith and Avyukth Creations</p>
+                <p style="font-size: 0.9rem; color: #999;">All rights reserved. Made with love in India 🇮🇳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const thathaAdvice = [
+            "குழந்தை, you sleep 12 hours and still tired? Even hibernating bears are more productive! 🐻",
+            "Your room is so messy, archaeologists want to excavate it for historical artifacts! 🏺",
+            "You're on phone so much, phone companies should pay YOU salary! When did you last see sunlight? 📱☀️", 
+            "You eat like sparrow but complain like elephant! Make up your mind - are you bird or mammal? 🐦🐘",
+            "Your driving is so careful, snails are honking at you to move faster! Speed limit is not suggestion for going slower! 🐌🚗",
+            "You say 'just 5 minutes' and disappear for 2 hours! Are you traveling to different time zone in bathroom? ⏰🚿",
+            "Your cooking skills are so bad, even smoke alarm has given up and moved out! 🔥👨‍🍳",
+            "You're so forgetful, you probably forgot what you forgot! Write reminder to remember your reminders! 🧠📝",
+            "Your fashion sense is so unique, even mannequins are filing complaints! What style is this - 'confused scarecrow'? 👗🤔",
+            "You exercise once and expect six-pack! Even wishful thinking has limits, my dear optimistic grandson! 💪😂",
+            "படிச்ச படிப்பு எங்க போச்சு? (Where did your education go?) You can't even change light bulb without YouTube tutorial! 💡",
+            "நீ பேசுற English-க்கு Shakespeare கூட புரியாது! (Even Shakespeare won't understand your English!) Speak properly or speak Tamil! 🗣️",
+            "எத்தன நேரம் mirror-ல பார்த்துட்டு இருக்க! (How long you stare at mirror!) Even mirror is bored of your face! Get ready and come! 🪞",
+            "Your salary என்ன ஆச்சு? எல்லாம் Swiggy-க்கு போச்சா? (Did it all go to Swiggy?) Learn to cook like normal person! 🍔",
+            "Morning எழுந்ததும் phone பார்க்குற! (First thing you check is phone!) God பார்க்கல, family பார்க்கல, phone-அ பார்க்குற! 📱🙏",
+            "உன்னோட ஒரே talent - TV remote காணாம போனா கண்டுபிடிக்குறது! (Your only talent - finding lost TV remote!) 📺",
+            "நீ வெளியில போய் வாங்குற coffee-க்கு ₹200! அது வீட்ல நான் தராம் free-ஆ கொடுக்கிறேன்! (I give same at home for free!) ☕",
+            "இந்த பொண்ணு வீட்ல சும்மா இருக்கா, வெளியில மட்டும் பேசாம இருக்க மாட்டா! (This girl is silent at home, but outside talks non-stop!) 🤐😄",
+            "Car வாங்கினா petrol காசு இல்ல! Phone வாங்கினா recharge காசு இல்ல! But coffee குடிக்க ₹300 இருக்கு! Priorities என்ன? 🚗☕"
+        ];
+
+        function getRandomAdvice() {
+            const randomAdvice = thathaAdvice[Math.floor(Math.random() * thathaAdvice.length)];
+            const adviceDisplay = document.getElementById('advice-display');
+            adviceDisplay.style.opacity = '0';
+            setTimeout(() => {
+                adviceDisplay.innerHTML = `"${randomAdvice}"<br><br><em style="color: #666;">- Wisdom from your loving Thatha 👴</em>`;
+                adviceDisplay.style.opacity = '1';
+            }, 200);
+        }
+
+        function updateHungerAdvice(value) {
+            const adviceElement = document.getElementById('hunger-advice');
+            let advice = "";
+            let bgColor = "";
+            let borderColor = "";
+            
+            if (value < 20) {
+                advice = "😱 அடடா! Very very hungry! Come immediately! I'll make கொழுக்கட்டை right now! எவ்ளோ நேரம் சாப்படாம இருந்திருப்ப! (How long you didn't eat!)";
+                bgColor = "#ffebee";
+                borderColor = "#f44336";
+            } else if (value < 40) {
+                advice = "😟 Little bit hungry? Wait I'll bring you some முறுக்கு and coffee! அதுக்குள்ள நான் இட்லி வெச்சிடறேன்! (Meanwhile I'll put idlis!)";
+                bgColor = "#fff3e0";
+                borderColor = "#ff9800";
+            } else if (value < 60) {
+                advice = "🤔 Not hungry but not full? Here, take this வாழைப்பழம் (banana) and these பிஸ்கட்! Light-ஆ சாப்டு! (Eat something light!)";
+                bgColor = "#f3e5f5";
+                borderColor = "#9c27b0";
+            } else if (value < 80) {
+                advice = "😊 Good good! But still eat something small. I made fresh அப்பளம்! ஒன்னு சாப்டு பார் எவ்ளோ crispy-ஆ இருக்கு! (Try one, see how crispy!)";
+                bgColor = "#e8f5e8";
+                borderColor = "#4caf50";
+            } else {
+                advice = "😤 Full ah? நம்பலை! (Can't believe!) Your stomach is only 80% full. Eat this லட்டு also! தொப்ப கொஞ்சம் வளர்க்கணும்! (Need to grow some belly!)";
+                bgColor = "#e3f2fd";
+                borderColor = "#2196f3";
+            }
+            
+            adviceElement.innerHTML = advice;
+            adviceElement.style.backgroundColor = bgColor;
+            adviceElement.style.borderLeftColor = borderColor;
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
